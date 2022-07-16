@@ -2,21 +2,11 @@
 
 /* common */
 * {
-  font-family: 'Calibri','Candara','Segoe Script','Arial',sans-serif;
+  font-family: sans-serif;
   color: #fff;
-  --color: #7e2a2c;
+  --color: #882a33;
   margin: 0;
   padding: 0;
-}
-
-.container {
-  overflow: hidden;
-}
-
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 img {
@@ -25,40 +15,49 @@ img {
   vertical-align: bottom;
 }
 
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 section {
   background-color: var(--color);
   margin: 10px;
   padding: 10px;
 }
 
+h1, h2, .programs, nav a {
+  font-family: 'Calibri', 'Open Sans', sans-serif;
+}
+
 h2 {
   border-bottom: solid 1px rgba(255, 255, 255, .5);
   line-height: .8;
+  font-size: 32px;
   padding: 10px 10px 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-decoration: none;
+  font-style: italic;
 }
 
+h2 small {
+  display: inline-block;
+  padding-left: 10px;
+  font-style: normal;
+}
 h3 {
-  margin-top: 10px;
-  position: relative;
-}
-
-h3::before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background: #000;
-  position: absolute;
+  margin: 10px 0 0;
+  text-shadow: 1px 1px 2px #500;
 }
 
 p {
   line-height: 2;
 }
 
+/* header */
 nav {
   margin: 10px 10px 0;
-  background-color: var(--color);
 }
 nav ul {
   display: flex;
@@ -74,53 +73,52 @@ nav li a {
   text-decoration: none;
   font-size: 24px;
   text-align: center;
+  font-style: italic;
 }
-/* header */
+
 header {
   background-color: var(--color);
+  background: url(images/Top.jpg) center;
   position: relative;
-  z-index: -20;
   margin: 0 10px 10px;
+}
+
+header div {
+  background-color: rgba(0, 0, 0, .5);
 }
 
 h1 {
   padding: 200px 0 250px 20px;
   font-style: italic;
   font-size: 42px;
+  z-index: 1;
 }
 
-header img {
-  transform: rotate(30deg);
-  width: 100%;
-  position: absolute;
-  top: -10px;
-  right: 10%;
-  z-index: -10;
-  height: 100%;
-  width: auto;
-}
 /* main */
-.img {
-  content: "";
-  transform: skewX(-30deg);
-  position: relative;
-  overflow: hidden;
-  width: 300px;
-  height: 300px;
-  float: right;
-}
-.img::after {
-  content: "";
-  position: absolute;
-  transform-origin: bottom left;
-  background-color: red;
-  width: 500px;
-  height: 300px;
-  clear: both;
-  transform: skewX(30deg);
-  background-size: cover;
-}
 
+main p {
+  margin-bottom: 20px;
+}
+th {
+  padding: 0 20px 5px 0;
+  vertical-align: top;
+  font-size: 18px;
+}
+td {
+  padding: 0 0 15px;
+}
+td div {
+  line-height: 1;
+  margin-bottom: 10px;
+  border-left: 2px solid #fff;
+  padding-left: 5px;
+}
+main small {
+  font-size: 14px;
+}
+/* main img {
+  box-shadow: 2px 2px 2px #555 inset;
+}効いてない */
 /* #aboutUs */
 
 /* #concert */
@@ -135,4 +133,5 @@ footer {
 footer h2,
 footer small {
   color: var(--color);
+  line-height: 1;
 }
